@@ -52,14 +52,14 @@ function checkDatabase() {
                 }
             })
             .then(response => {
-                return response.json[]
+                return response.json()
             })
             .then(() => {
                 const transaction = db.transaction(["pending"], 'readwrite')
                 const store = transaction.createObjectStore("pending")
                 store.clear();
             })
-            
+
         }
     }
 }
